@@ -1,0 +1,71 @@
+LICENSED WORK: Living Supply-Chain Security Falsification Battery v1.1.3
+Copyright (c) 2026 Soulshine. All rights reserved.
+
+Licensed under the Business Source License 1.1 (BUSL-1.1). See LICENSE.
+
+Non-production use is free — reading the source, running the test suites,
+reproducing the execution receipts, and independently verifying every claim
+made in this repository. Production use requires a commercial license from
+the Licensor. On 2030-09-02 this work converts to the Apache License,
+Version 2.0.
+
+-----------------------------------------------------------------------------
+THE LICENSOR
+-----------------------------------------------------------------------------
+
+soulshine — (verb) the act of letting Jesus' light shine through you.
+
+Soulshine is a 501(c)(3) nonprofit based in Tulsa, Oklahoma. It is a Christian
+young adult ministry serving artists rather than athletes: a community-group
+and festival model built for high school, college, and young adult students in
+vocal, theater, band, orchestra, and audiovisual arts, structured after the
+Fellowship of Christian Athletes.
+
+Where most outreach ministries depend on solicited donations, Soulshine is
+designed to fund its own work in each market — through art shows, music
+festivals, theatrical productions, and annual awards events — supporting
+scholarships, community outreach, and music and arts education.
+
+Founding servant: Rusty W. McMurray.
+
+A fuller description is in ABOUT_SOULSHINE.md.
+
+-----------------------------------------------------------------------------
+RIGHTS AND AUTHORSHIP
+-----------------------------------------------------------------------------
+
+All rights in the Licensed Work are held by Soulshine. Research and technology
+developed under the Soulshine umbrella is owned by the nonprofit, and revenue
+from commercial licensing supports its charitable purpose.
+
+Authorship is recorded separately and is not affected by this. Architecture,
+governing invariants, and research direction are credited in AUTHORS.md.
+Authorship credit and ownership of rights are distinct: the credit belongs to
+the author, the rights belong to Soulshine.
+
+-----------------------------------------------------------------------------
+WHY THERE ARE NO PER-FILE LICENSE HEADERS
+-----------------------------------------------------------------------------
+
+Source files in this repository are covered by content hashes — a
+MANIFEST.sha256, a SEAL_MANIFEST, or a provenance record — and the published
+execution receipts reproduce only against those exact bytes.
+
+Inserting a license header into a hash-covered file would change its hash,
+break the manifest, and invalidate the reproduction record that is the
+principal evidentiary claim of this repository.
+
+The license therefore applies at the repository level, through this NOTICE and
+the LICENSE file. This is deliberate, not an oversight. Do not add headers to
+sealed trees.
+
+-----------------------------------------------------------------------------
+THIRD PARTY
+-----------------------------------------------------------------------------
+
+The BUSL-1.1 license text is copyright (c) 2017 MariaDB Corporation Ab.
+"Business Source License" is a trademark of MariaDB Corporation Ab. Used under
+the permission granted in that text, subject to its Covenants of Licensor.
+
+Third-party dependencies are not covered by this License and remain under
+their own terms.

@@ -1,0 +1,22 @@
+# License files
+
+This package is licensed under the Business Source License 1.1.
+
+- `LICENSE` — the BSL 1.1 terms, with Soulshine named as Licensor,
+  Change Date 2030-09-02, and Apache License 2.0 as the Change License.
+- `NOTICE` — licensor description, rights and authorship statement, and the
+  reason there are no per-file license headers.
+- `ABOUT_SOULSHINE.md` — fuller description of the licensor.
+
+Non-production use is free: reading the source, running the battery,
+reproducing the execution receipt, and independently verifying every claim.
+Production use requires a commercial license from the Licensor.
+
+All rights in the Licensed Work are held by Soulshine. Authorship credit is
+recorded separately in `AUTHORS.md` and is unaffected: the credit belongs to
+the author, the rights belong to Soulshine.
+
+**Do not add per-file license headers.** Source files are covered by
+`MANIFEST.sha256` and the battery's own manifest, and the published execution
+receipt reproduces only against those exact bytes. A header would change the
+hashes and invalidate the reproduction record. See `NOTICE`.
