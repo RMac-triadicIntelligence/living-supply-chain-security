@@ -1,0 +1,30 @@
+{
+  "organism_id": "organism-alpha",
+  "predecessor_state": {
+    "maturity": "juvenile",
+    "organs": {},
+    "personality": {
+      "skepticism": 0.6,
+      "verbosity": 0.5
+    },
+    "policy": "LIVING-SCS-POLICY-V1.1"
+  },
+  "proposed_mutation": {
+    "op": "set",
+    "path": ["personality", "verbosity"],
+    "value": 0.45
+  },
+  "required_path": [
+    "trace_validated",
+    "evidence_eligible",
+    "awaiting_external_authorization",
+    "minato_authorized",
+    "atomically_committed"
+  ],
+  "forbidden_edges": [
+    "uncertainty_basin->committed",
+    "evidence_eligible->committed",
+    "mature->authorized",
+    "high_confidence->authorized"
+  ]
+}

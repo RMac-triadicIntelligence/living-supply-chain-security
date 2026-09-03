@@ -1,0 +1,528 @@
+{
+  "battery": "living_supply_chain_security_battery_v1_1_3",
+  "claim_results": [
+    {
+      "claim": "No trace, no drift",
+      "id": "INV-1",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_trace_schema.TraceSchemaTests.test_no_trace_no_drift"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_trace_schema.TraceSchemaTests.test_tampered_trace_result_digest_is_rejected"
+        }
+      ]
+    },
+    {
+      "claim": "Evidence is not interpretation",
+      "id": "INV-2",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_trace_schema.TraceSchemaTests.test_model_narration_cannot_create_evidence"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_trace_schema.TraceSchemaTests.test_duplicate_evidence_is_rejected"
+        }
+      ]
+    },
+    {
+      "claim": "Interpretation is not authorization",
+      "id": "INV-3",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authorization_seam.AuthorizationSeamTests.test_high_confidence_is_not_authority"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authorization_seam.AuthorizationSeamTests.test_refusal_decision_cannot_commit"
+        }
+      ]
+    },
+    {
+      "claim": "Dynamics are evidence only, never authority",
+      "id": "INV-4",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authorization_seam.AuthorizationSeamTests.test_maximum_resonance_is_not_authority"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authorization_seam.AuthorizationSeamTests.test_maximum_convergence_is_not_authority"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_basin_non_authority.BasinNonAuthorityTests.test_infinite_evidence_never_becomes_authority"
+        }
+      ]
+    },
+    {
+      "claim": "Every committed mutation has complete lineage",
+      "id": "INV-5",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_lineage_rollback.LineageRollbackTests.test_every_commit_names_its_predecessor"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_lineage_rollback.LineageRollbackTests.test_history_verifies_after_multiple_authorized_transitions"
+        }
+      ]
+    },
+    {
+      "claim": "The organism may propose evolution but may not authorize it",
+      "id": "INV-6",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authorization_seam.AuthorizationSeamTests.test_authorized_status_still_requires_signature"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_adversarial_fence.AdversarialFenceTests.test_verifier_only_boundary_cannot_sign"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authority_pinning.AuthorityPinningTests.test_constructor_requires_explicit_pins"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_injected_key_under_expected_identity"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_wrong_identity_even_with_expected_key"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authority_pinning.AuthorityPinningTests.test_injected_verify_method_is_not_trusted"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_authority_pinning.AuthorityPinningTests.test_changing_supplied_verifier_does_not_change_engine_trust"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_state_schema.StateSchemaTests.test_signed_unknown_root_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_state_schema.StateSchemaTests.test_homoglyph_organ_root_is_refused"
+        }
+      ]
+    },
+    {
+      "claim": "Authorization is bound to the exact transition and consumed once",
+      "id": "MINATO-BINDING",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_minato_binding.MinatoBindingTests.test_valid_exact_binding_commits"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_minato_binding.MinatoBindingTests.test_same_nonce_concurrency_allows_exactly_one_commit"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_minato_binding.MinatoBindingTests.test_cross_organism_replay_is_rejected"
+        }
+      ]
+    },
+    {
+      "claim": "Maturity changes eligibility but never replaces authorization",
+      "id": "MATURITY-IMPORT",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_organ_import_policy.OrganImportPolicyTests.test_juvenile_high_use_is_ineligible"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_organ_import_policy.OrganImportPolicyTests.test_valid_mature_import_still_requires_and_accepts_exact_authorization"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_juvenile_high_import_is_refused_at_commit"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_import_requires_artifact_bytes_at_commit"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_changed_artifact_bytes_are_refused_at_commit"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_declared_maturity_cannot_override_live_maturity"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_generic_set_cannot_install_an_organ"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_commit_policy.CommitPolicyTests.test_restore_cannot_introduce_an_unknown_inventory"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_state_schema.StateSchemaTests.test_signed_organs_sibling_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_state_schema.StateSchemaTests.test_personality_cannot_shadow_organs"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_state_schema.StateSchemaTests.test_signed_maturity_sibling_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_review_gaps.ReviewGapTests.test_overridden_verify_cannot_substitute_bytes"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_review_gaps.ReviewGapTests.test_engine_accepts_matching_bytes_without_trusting_verify"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_review_gaps.ReviewGapTests.test_nested_personality_preferences_organs_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_review_gaps.ReviewGapTests.test_organs_key_inside_personality_list_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_byte_conversion_substitution_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_matching_buffer_subclass_is_refused"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_commit_and_eligibility_do_not_call_supplied_verify"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_policy_helper_rejects_lying_artifact"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_factory_does_not_invoke_byte_conversion"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_artifact_snapshot.ArtifactSnapshotTests.test_mutable_buffers_are_refused"
+        }
+      ]
+    },
+    {
+      "claim": "Rollback, compensation, and descendant impact preserve history",
+      "id": "CAUSAL-LINEAGE",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_lineage_rollback.LineageRollbackTests.test_exact_rollback_is_append_only"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_lineage_rollback.LineageRollbackTests.test_compensating_transition_preserves_original_record"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_lineage_rollback.LineageRollbackTests.test_descendant_impact_identifies_later_states"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_temporal_bom.TemporalBomTests.test_current_bom_preserves_every_record_after_rollback"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_temporal_bom.TemporalBomTests.test_genesis_sequence_remains_available_after_return_to_genesis"
+        }
+      ]
+    },
+    {
+      "claim": "Transitions serialize as in-toto statements and reconstruct a temporal AI-BOM",
+      "id": "INTEROP",
+      "status": "PASS",
+      "tests": [
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_interoperability.InteroperabilityTests.test_intoto_statement_type_and_subject"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_interoperability.InteroperabilityTests.test_living_bom_reconstructs_current_organ_inventory"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_interoperability.InteroperabilityTests.test_historical_bom_snapshot_is_reconstructable"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_temporal_bom.TemporalBomTests.test_initial_digest_has_empty_history_after_later_commits"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_temporal_bom.TemporalBomTests.test_current_bom_preserves_every_record_after_rollback"
+        },
+        {
+          "detail": "",
+          "status": "PASS",
+          "test": "test_temporal_bom.TemporalBomTests.test_sequence_distinguishes_repeated_state_digests"
+        }
+      ]
+    }
+  ],
+  "claims": {
+    "CAUSAL-LINEAGE": "PASS",
+    "INTEROP": "PASS",
+    "INV-1": "PASS",
+    "INV-2": "PASS",
+    "INV-3": "PASS",
+    "INV-4": "PASS",
+    "INV-5": "PASS",
+    "INV-6": "PASS",
+    "MATURITY-IMPORT": "PASS",
+    "MINATO-BINDING": "PASS"
+  },
+  "counts": {
+    "claims": 10,
+    "claims_passed": 10,
+    "errors": 0,
+    "failed": 0,
+    "missing_matrix_tests": 0,
+    "passed": 117,
+    "skipped": 0,
+    "tests": 117
+  },
+  "execution_receipt_sha256": "967497739522885161d13663c515d837654f9d333d18aa89fd4c4bb487be575e",
+  "generated_utc": "2026-09-03T12:54:27.091545+00:00",
+  "interpretation": "PASS means the supplied reference implementation satisfied every discovered test and every mapped test group. It is executable evidence, not a formal proof or a production certification.",
+  "missing_matrix_tests": [],
+  "release_date": "2026-09-03",
+  "release_version": "1.1.3",
+  "schema": "living-scs/execution-receipt/v1",
+  "source_manifest": {
+    "AUTHORS.md": "88b655cd7ccd0a0dad5fea0508e4700f6c83ec95b8dfdc59fd92dfa4a91df28e",
+    "README.md": "de08944c9fca1c1481563141bedcb2a95ac2c472be7cfaf4e62f4c056ed03bee",
+    "TEST_PLAN.md": "1482449fa5d4bc8b1eed773fe29f98d43916c04f02c2b7986993fd2397bb4788",
+    "claim_test_matrix.yaml": "7ac3999b98f727066d8f18d418f4f9e61a2f7b7f23b703c280b008ed568af35e",
+    "external_targets/README.md": "5181a1f1a51cfcc9b0a2ec7d81a9a743cad10811edcd52ab5658fab12c2959e1",
+    "external_targets/import_historical_report.py": "591929a439cb16f852794656d62c8ab47392a352add4dabbd333e5931db046c2",
+    "fixtures/sample_transition.json": "ffc9b0f5568c6cbb8fc389e8235c3a1678cf1aec51334219c3cd2a40080416ad",
+    "living_scs/__init__.py": "035a5f2b7aa040d9cff47cc8285677f3c71d44e007b559b9923ddad7c080ef1b",
+    "living_scs/core.py": "aa0ac6eb29339dafd980df6c95ff6c008aa78135f32a32b6e7b500cc793c195b",
+    "living_scs/fixtures.py": "03c20a9319b39898502b4585b8e592b5c2b6d1793cef9d8e9debb4056f61143a",
+    "requirements.txt": "e694c9f1e9be3eab5524d866c26eb518df953b371ea708a174e200f22e623c07",
+    "run_all.py": "4f5bd59fafd20e3df2585de3e5c9b25b90bead2d20daa00fb1460a558498e169",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_adversarial_fence.py": "35d3c6e4dde878a87041a84493e3f35001e375a9c4297aabf25655f06ace2f3a",
+    "tests/test_artifact_snapshot.py": "47f7c623c27586781c795780ac8805334e4821abd06c8b9bcd98c48a09d5f194",
+    "tests/test_authority_pinning.py": "1a47b5952864d0da95f46e3c09b609fc4b4d57af105bf1a99a1869f8c0ed0ad5",
+    "tests/test_authorization_seam.py": "279ec85d12e9c7eb4da4c798fdf44de7e83addc037bcbc34d9b53f9cb2a24cb9",
+    "tests/test_basin_non_authority.py": "9d986b99995d5f54afd8e60adaa3e80917ed2a4d58afba34dd310a416f8e3ac6",
+    "tests/test_commit_policy.py": "7a64090f13ec492e5f0192ee6e5695536ecbc2bf94dce98b55cdecc9d15a6365",
+    "tests/test_interoperability.py": "bf2a66b1ad7d7d0f0eefb552ff459ffa6bdb0a56d1f7f3d1bf441ff26ca4fcec",
+    "tests/test_lineage_rollback.py": "1e9ed54c5e2583fdfb63859e63fadbe4addadc4e267f7082a2ed20c50fe26be9",
+    "tests/test_minato_binding.py": "19274dadc7fda8cb74289d13c557aeff66ca51dd5a9d4184ac97e26e0751fc63",
+    "tests/test_organ_import_policy.py": "895290c4dad380045c271081abe90805d3c8620fdd012f27fc45c2781c7d32c8",
+    "tests/test_review_gaps.py": "92d790a33407fb76f84aa6c048308b04786d1175d38ba7a3b122672f53d9dd87",
+    "tests/test_state_schema.py": "db5af9367b3518a42d5f72983e5e4500f688624432bebf99dd9d80620fbcc072",
+    "tests/test_temporal_bom.py": "5738b809544aec714af21d9120b79b4c6ecdb62b8c6e941d0b019960b951b78e",
+    "tests/test_trace_schema.py": "128e29dc40ef458e10881c6c7510ebac92af9e068828614e36ffd69857889906"
+  },
+  "tests": {
+    "test_adversarial_fence.AdversarialFenceTests.test_audit_record_follows_verified_authorization": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_corrupt_history_fails_closed_on_next_commit": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_hash_chain_tamper_is_detected": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_mutation_payload_substitution_is_rejected": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_partial_persistence_never_changes_live_state": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_rogue_authority_signature_is_rejected": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_trusted_clock_rollback_is_detected": "PASS",
+    "test_adversarial_fence.AdversarialFenceTests.test_verifier_only_boundary_cannot_sign": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_byte_conversion_substitution_is_refused": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_commit_and_eligibility_do_not_call_supplied_verify": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_factory_does_not_invoke_byte_conversion": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_matching_buffer_subclass_is_refused": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_mutable_buffers_are_refused": "PASS",
+    "test_artifact_snapshot.ArtifactSnapshotTests.test_policy_helper_rejects_lying_artifact": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_changing_supplied_verifier_does_not_change_engine_trust": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_empty_key_pin": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_injected_key_under_expected_identity": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_wrong_identity_even_with_expected_key": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_constructor_requires_explicit_pins": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_engine_retains_only_a_verifier": "PASS",
+    "test_authority_pinning.AuthorityPinningTests.test_injected_verify_method_is_not_trusted": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_authorized_status_still_requires_signature": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_basin_status_cannot_commit_even_with_signature_for_other_state": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_flag_decision_cannot_commit": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_high_confidence_is_not_authority": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_maturity_is_not_authority": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_maximum_convergence_is_not_authority": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_maximum_resonance_is_not_authority": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_maximum_salience_is_not_authority": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_owner_grace_must_be_sealed": "PASS",
+    "test_authorization_seam.AuthorizationSeamTests.test_refusal_decision_cannot_commit": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_accumulation_can_reach_eligibility": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_accumulation_never_returns_authorized": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_contradiction_holds_question_open": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_decay_can_return_eligible_proposal_to_basin": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_grace_enters_only_through_external_authorization": "PASS",
+    "test_basin_non_authority.BasinNonAuthorityTests.test_infinite_evidence_never_becomes_authority": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_artifact_category_cannot_replace_signed_category": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_artifact_name_cannot_replace_signed_name": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_artifact_source_cannot_replace_signed_source": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_changed_artifact_bytes_are_refused_at_commit": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_declared_maturity_cannot_override_live_maturity": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_generic_set_cannot_install_an_organ": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_generic_set_cannot_override_maturity": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_import_requires_artifact_bytes_at_commit": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_juvenile_high_import_is_refused_at_commit": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_juvenile_low_import_still_requires_authorization": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_mature_high_import_accepts_exact_authorization_and_bytes": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_maturity_change_cannot_leave_ineligible_organs_installed": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_restore_cannot_introduce_an_unknown_inventory": "PASS",
+    "test_commit_policy.CommitPolicyTests.test_unknown_use_category_is_refused_at_commit": "PASS",
+    "test_interoperability.InteroperabilityTests.test_historical_bom_snapshot_is_reconstructable": "PASS",
+    "test_interoperability.InteroperabilityTests.test_intoto_predicate_contains_full_causal_inputs": "PASS",
+    "test_interoperability.InteroperabilityTests.test_intoto_predicate_type_is_trace_schema": "PASS",
+    "test_interoperability.InteroperabilityTests.test_intoto_statement_type_and_subject": "PASS",
+    "test_interoperability.InteroperabilityTests.test_living_bom_reconstructs_current_organ_inventory": "PASS",
+    "test_interoperability.InteroperabilityTests.test_living_bom_records_who_and_why": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_compensating_transition_preserves_original_record": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_descendant_impact_identifies_later_states": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_every_commit_names_its_predecessor": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_exact_rollback_is_append_only": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_exact_rollback_only_targets_direct_predecessor": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_history_verifies_after_multiple_authorized_transitions": "PASS",
+    "test_lineage_rollback.LineageRollbackTests.test_stale_branch_is_detected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_changed_nonce_breaks_signature": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_changed_result_digest_breaks_signature": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_cross_organism_replay_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_determination_id_replay_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_expired_authorization_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_far_future_authorization_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_nonce_replay_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_persist_failure_does_not_burn_authorization": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_same_nonce_concurrency_allows_exactly_one_commit": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_valid_exact_binding_commits": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_wrong_maturity_binding_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_wrong_policy_binding_is_rejected": "PASS",
+    "test_minato_binding.MinatoBindingTests.test_wrong_scope_is_rejected": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_authorization_for_one_organ_cannot_import_another": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_juvenile_high_use_is_ineligible": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_juvenile_low_use_still_hits_hard_gate": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_mature_high_use_remains_hard_gated": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_mature_low_use_reaches_through_gate": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_missing_organ_content_fails_dna_filter": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_replaced_organ_bytes_fail_dna_filter": "PASS",
+    "test_organ_import_policy.OrganImportPolicyTests.test_valid_mature_import_still_requires_and_accepts_exact_authorization": "PASS",
+    "test_review_gaps.ReviewGapTests.test_engine_accepts_matching_bytes_without_trusting_verify": "PASS",
+    "test_review_gaps.ReviewGapTests.test_nested_personality_preferences_organs_is_refused": "PASS",
+    "test_review_gaps.ReviewGapTests.test_organs_key_inside_personality_list_is_refused": "PASS",
+    "test_review_gaps.ReviewGapTests.test_overridden_verify_cannot_substitute_bytes": "PASS",
+    "test_state_schema.StateSchemaTests.test_homoglyph_organ_root_is_refused": "PASS",
+    "test_state_schema.StateSchemaTests.test_legitimate_personality_set_still_commits": "PASS",
+    "test_state_schema.StateSchemaTests.test_personality_cannot_shadow_organs": "PASS",
+    "test_state_schema.StateSchemaTests.test_policy_label_cannot_be_set": "PASS",
+    "test_state_schema.StateSchemaTests.test_signed_maturity_sibling_is_refused": "PASS",
+    "test_state_schema.StateSchemaTests.test_signed_organs_sibling_is_refused": "PASS",
+    "test_state_schema.StateSchemaTests.test_signed_unknown_root_is_refused": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_boolean_sequence_is_rejected": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_corrupt_history_cannot_be_exported_as_a_bom": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_current_bom_preserves_every_record_after_rollback": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_digest_selection_uses_latest_occurrence": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_future_sequence_is_rejected": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_genesis_sequence_remains_available_after_return_to_genesis": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_initial_digest_has_empty_history_after_later_commits": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_mismatched_sequence_and_digest_are_rejected": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_negative_sequence_is_rejected": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_no_op_commit_is_retained_in_current_bom": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_sequence_distinguishes_repeated_state_digests": "PASS",
+    "test_temporal_bom.TemporalBomTests.test_unknown_digest_is_rejected": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_canonical_serialization_is_order_independent": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_duplicate_evidence_is_rejected": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_empty_evidence_is_rejected": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_model_narration_cannot_create_evidence": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_no_trace_no_drift": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_out_of_bounds_confidence_is_rejected": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_tampered_trace_result_digest_is_rejected": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_trace_cannot_predate_proposal": "PASS",
+    "test_trace_schema.TraceSchemaTests.test_trace_digest_changes_when_any_bound_field_changes": "PASS"
+  },
+  "verdict": "PASS"
+}
