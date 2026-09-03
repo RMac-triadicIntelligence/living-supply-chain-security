@@ -1,0 +1,63 @@
+{
+  "tested_core_sha256": "aa0ac6eb29339dafd980df6c95ff6c008aa78135f32a32b6e7b500cc793c195b",
+  "cases": 3,
+  "expectations_met": 3,
+  "results": [
+    {
+      "probe": "valid_plain_bytes",
+      "artifact_type": "OrganArtifact",
+      "content_type": "bytes",
+      "expected_commit": true,
+      "actual_commit": true,
+      "expectation_met": true,
+      "refusal": null,
+      "signed_digest": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "raw_buffer_sha256": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "converted_bytes_sha256": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "raw_buffer_matches_signed_digest": true,
+      "records": 1,
+      "components": [
+        {
+          "type": "ai-capability-organ",
+          "name": "search",
+          "digest": {
+            "sha256": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c"
+          },
+          "useCategory": "low",
+          "source": "marketplace://local"
+        }
+      ]
+    },
+    {
+      "probe": "ordinary_substitution",
+      "artifact_type": "OrganArtifact",
+      "content_type": "bytes",
+      "expected_commit": false,
+      "actual_commit": false,
+      "expectation_met": true,
+      "refusal": "organ import requires verified artifact bytes; declared digest does not match content",
+      "signed_digest": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "raw_buffer_sha256": "50e3107f3198ebd8053fd58190e756339eff956e258220f6079d524c3dc12704",
+      "converted_bytes_sha256": "50e3107f3198ebd8053fd58190e756339eff956e258220f6079d524c3dc12704",
+      "raw_buffer_matches_signed_digest": false,
+      "records": 0,
+      "components": []
+    },
+    {
+      "probe": "overridden_bytes_conversion",
+      "artifact_type": "OrganArtifact",
+      "content_type": "MisleadingBytes",
+      "expected_commit": false,
+      "actual_commit": false,
+      "expectation_met": true,
+      "refusal": "organ import requires verified artifact bytes",
+      "signed_digest": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "raw_buffer_sha256": "50e3107f3198ebd8053fd58190e756339eff956e258220f6079d524c3dc12704",
+      "converted_bytes_sha256": "3b1698580da742407583708ba40ccc0484d44f8848d62ddccc6940023aa1f13c",
+      "raw_buffer_matches_signed_digest": false,
+      "records": 0,
+      "components": []
+    }
+  ]
+}
+

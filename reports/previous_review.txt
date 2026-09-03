@@ -1,0 +1,30 @@
+{
+  "python": "3.12.13",
+  "cryptography": "46.0.0",
+  "tested_core_sha256": "aa0ac6eb29339dafd980df6c95ff6c008aa78135f32a32b6e7b500cc793c195b",
+  "tests": 6,
+  "passed": 6,
+  "failed": 0,
+  "errors": 0,
+  "outcomes": {
+    "test_direct_shadow_is_rejected": "PASS",
+    "test_nested_dictionary_cannot_shadow_inventory": "PASS",
+    "test_nested_list_cannot_shadow_inventory": "PASS",
+    "test_normal_artifact_mismatch_is_rejected": "PASS",
+    "test_overridden_verify_cannot_approve_mismatched_bytes": "PASS",
+    "test_valid_artifact_is_accepted": "PASS"
+  },
+  "interpretation": "These supplemental expectations are separate from the supplied release battery. Nested-shadow expectations require a stronger recursive anti-shadowing contract than exact-field adapters need."
+}
+
+test_direct_shadow_is_rejected (__main__.main.<locals>.ReviewProbes.test_direct_shadow_is_rejected) ... ok
+test_nested_dictionary_cannot_shadow_inventory (__main__.main.<locals>.ReviewProbes.test_nested_dictionary_cannot_shadow_inventory) ... ok
+test_nested_list_cannot_shadow_inventory (__main__.main.<locals>.ReviewProbes.test_nested_list_cannot_shadow_inventory) ... ok
+test_normal_artifact_mismatch_is_rejected (__main__.main.<locals>.ReviewProbes.test_normal_artifact_mismatch_is_rejected) ... ok
+test_overridden_verify_cannot_approve_mismatched_bytes (__main__.main.<locals>.ReviewProbes.test_overridden_verify_cannot_approve_mismatched_bytes) ... ok
+test_valid_artifact_is_accepted (__main__.main.<locals>.ReviewProbes.test_valid_artifact_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

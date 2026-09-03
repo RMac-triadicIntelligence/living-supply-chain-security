@@ -1,0 +1,114 @@
+{
+  "verdict": "PASS",
+  "baseline_unchanged": true,
+  "mutations": [
+    {
+      "mutation": "M1",
+      "target": "signature verification",
+      "caught": true,
+      "failed": 4,
+      "errors": 0,
+      "expected_test": "test_minato_binding.MinatoBindingTests.test_changed_nonce_breaks_signature",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M2",
+      "target": "authorization decision",
+      "caught": true,
+      "failed": 2,
+      "errors": 0,
+      "expected_test": "test_authorization_seam.AuthorizationSeamTests.test_refusal_decision_cannot_commit",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M3",
+      "target": "nonce and determination replay",
+      "caught": true,
+      "failed": 2,
+      "errors": 0,
+      "expected_test": "test_minato_binding.MinatoBindingTests.test_determination_id_replay_is_rejected",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M4",
+      "target": "authorization expiry",
+      "caught": true,
+      "failed": 1,
+      "errors": 0,
+      "expected_test": "test_minato_binding.MinatoBindingTests.test_expired_authorization_is_rejected",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M5",
+      "target": "verifier signing guard",
+      "caught": true,
+      "failed": 0,
+      "errors": 2,
+      "expected_test": "test_adversarial_fence.AdversarialFenceTests.test_verifier_only_boundary_cannot_sign",
+      "test_status": "ERROR"
+    },
+    {
+      "mutation": "M6",
+      "target": "commit policy enforcement",
+      "caught": true,
+      "failed": 24,
+      "errors": 0,
+      "expected_test": "test_commit_policy.CommitPolicyTests.test_juvenile_high_import_is_refused_at_commit",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M7",
+      "target": "temporal BOM first-occurrence regression",
+      "caught": true,
+      "failed": 6,
+      "errors": 0,
+      "expected_test": "test_temporal_bom.TemporalBomTests.test_current_bom_preserves_every_record_after_rollback",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M8",
+      "target": "constructor public-key pin check",
+      "caught": true,
+      "failed": 1,
+      "errors": 0,
+      "expected_test": "test_authority_pinning.AuthorityPinningTests.test_constructor_rejects_injected_key_under_expected_identity",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M9",
+      "target": "verification delegated to injected authority",
+      "caught": true,
+      "failed": 3,
+      "errors": 0,
+      "expected_test": "test_authority_pinning.AuthorityPinningTests.test_injected_verify_method_is_not_trusted",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M10",
+      "target": "restore caller-controlled byte conversion",
+      "caught": true,
+      "failed": 3,
+      "errors": 0,
+      "expected_test": "test_artifact_snapshot.ArtifactSnapshotTests.test_byte_conversion_substitution_is_refused",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M11",
+      "target": "policy helper trusts supplied artifact verification",
+      "caught": true,
+      "failed": 2,
+      "errors": 0,
+      "expected_test": "test_artifact_snapshot.ArtifactSnapshotTests.test_policy_helper_rejects_lying_artifact",
+      "test_status": "FAIL"
+    },
+    {
+      "mutation": "M12",
+      "target": "recursive protected-name scan disabled for mappings",
+      "caught": true,
+      "failed": 2,
+      "errors": 0,
+      "expected_test": "test_review_gaps.ReviewGapTests.test_nested_personality_preferences_organs_is_refused",
+      "test_status": "FAIL"
+    }
+  ]
+}
